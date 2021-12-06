@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- boostrap  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Mi css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Cachipun</title>
+</head>
+
+<nav class="navbar navbar-expand-lg navbar-dark  sticky-top">
+    <div class="container">
+        <h3>Cachipun</h3>
+        <div id="infoJuego" class="row text-center">
+            <div class="col-3">
+                <span>Ganadas <span class="fw-bold" id="infoWin"></span></span>
+            </div>
+            <div class=" col-3">
+                <span>Perdidas <span class="fw-bold" id="infoLose"></span></span>
+            </div>
+            <div class="col-3">
+                <span>Empatadas<p class="fw-bold" id="infoTie"></p></span>
+            </div>
+            <div class="col-3">
+                <span>Juegos <span class="fw-bold" id="juegosrestantes"></span></span>
+            </div>
+        </div>
+</nav>
+
+<body>
+    <!-- inicio del juego -->
+    <section id="secInicio" class="container  p-5">
+        <h1 class="text-center p-5">Rock & Paper & Scissors</h1>
+        <div id="divInicio " class="text-center">
+            <H2>Pelear a cuantos Round</H2>
+        </div>
+        <div class="container text-center">
+            <input type="number" class="form-control mb-3" id="cantJuegos">
+            <button id="btnIngresar" type="button" onclick="inicio()" class="btn btn-primary">Ir al Juego</button>
+        </div>
+    </section>
+
+    <!-- resultados -->
+    <section class="container py-5 text-center" id="sec-resul">
+        <div>
+            <h2 class="text-center bg-drak text-white" id="p5"></h2>
+        </div>
+        <button id="btnIngresar" type="button" onclick="location.reload()" class="btn btn-primary">Volver a
+            Jugar</button>
+    </section>
+
+    <!-- ESPACIO DEL JUEGO -->
+    <section id="divJuego" class="container p-2">
+        <div>
+            <h1 class="text-center">Selecciona con quien quieres Pelear</h1>
+        </div>
+        <div id="bnt_juegos">
+            <div class="text-center row p-5">
+                <div class="col-4">
+                    <button id="btnPiedra" type="button">
+                        <img src="assets/img/1.png" alt="">
+                    </button>
+                </div>
+                <div class="col-4">
+                    <button id="btnPapel" type="button">
+                        <img src="assets/img/2.png" alt="">
+                    </button>
+                </div>
+                <div class="col-4">
+                    <button id="btnTijera" type="button">
+                        <img src="assets/img/3.png" alt="">
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- imagenes del resultado -->
+
+        <div class="text-center pb-3" id=imgResultados>
+            <img src="" alt="" id="userImg">
+            <div class="p-2 text-center">
+                <h2 id="resultados">VS</h2>
+            </div>
+            <img src="" alt="" id=macImg>
+        </div>
+        <!-- Botnoes del juego -->
+        <div class="text-center">
+            <button id="btnIngresar" type="button" onclick="location.reload()" class="btn btn-primary">Volver a
+                Jugar</button>
+            <button id="btnIngresar" type="button" onclick="verResultados()" class="btn btn-primary">Ver
+                Resultados</button>
+        </div>
+    </section>
+
+    <footer class="container text-center pt-5">
+        <h4>Created By JIRG</h4>
+    </footer>
+    <!-- js boostrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+    <!-- mi js -->
+    <script src="assets/js/app.js"></script>
+</body>
+
+</html>

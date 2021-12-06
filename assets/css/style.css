@@ -1,0 +1,21 @@
+
+
+body{
+    background-color:lightgray;
+}
+
+.navbar{
+    background-color:green;
+    color:white;
+}
+
+
+#bnt_juegos img{
+        
+        width: 70%;
+}
+
+ #imgResultados img{
+
+    width: 8%;
+}
