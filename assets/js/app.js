@@ -3,6 +3,8 @@
 document.getElementById("divJuego").style.display = 'none';
 document.getElementById("sec-resul").style.display = 'none';
 
+document.getElementById("infoJuego").style.display = 'none';
+
 const btnPiedra = document.getElementById("btnPiedra");
 const btnPapel = document.getElementById("btnPapel");
 const btnTijera = document.getElementById("btnTijera");
@@ -28,6 +30,7 @@ function inicio() {
     numJuegos = document.getElementById("cantJuegos").value;
     document.getElementById("secInicio").style.display = 'none';
     document.getElementById("divJuego").style.display = 'block';
+    document.getElementById("infoJuego").style.display = 'inherit';
     var jr = document.getElementById("juegosrestantes").innerHTML = numJuegos;
 }
 var jr = document.getElementById("juegosrestantes").innerHTML = numJuegos;
@@ -45,8 +48,9 @@ btnTijera.addEventListener("click", () => {
 function verResultados() {
     document.getElementById("divJuego").style.display = 'none';
     document.getElementById("sec-resul").style.display = 'block';
-
-    document.getElementById("p5").innerHTML = "ganaste " + ganaste + " veces" + " perdiste " + perdiste + " veces " + "empataste " + empataste + " veces";
+    document.getElementById("p5").innerHTML = "Ganaste " + ganaste;
+    document.getElementById("p6").innerHTML = "Empataste " + empataste;
+    document.getElementById("p7").innerHTML = "Perdiste " + perdiste;
 }
 
 function play(user, numJuegos) {
@@ -60,6 +64,7 @@ function play(user, numJuegos) {
         userImg.src = "assets/img/" + user + ".png";
 
         txtResultado.innerHTML = "Pensando...";
+
         setTimeout(function () {
             var result = resultados(user, opcmaquina);
             macImg.src = "assets/img/" + opcmaquina + ".png";
@@ -86,8 +91,6 @@ function play(user, numJuegos) {
                     }, 500)
                     perdiste = perdiste + 1;
                     document.getElementById("infoLose").innerHTML = perdiste;
-
-
                     break;
             }
         }, 1500);
@@ -111,7 +114,7 @@ function resultados(user, opcmaquina) {
     }
 }
 
-function volver() {
-    document.getElementById("secInicio").style.display = 'block';
-    document.getElementById("divJuego").style.display = 'none';
-}
+// function volver() {
+//     document.getElementById("secInicio").style.display = 'block';
+//     document.getElementById("divJuego").style.display = 'none';
+// }

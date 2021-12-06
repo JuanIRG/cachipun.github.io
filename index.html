@@ -40,15 +40,22 @@
             <H2>Pelear a cuantos Round</H2>
         </div>
         <div class="container text-center">
-            <input type="number" class="form-control mb-3" id="cantJuegos">
+            <input type="number" class="form-control mb-3" id="cantJuegos"
+                placeholder="Ingresa Numero de Round a jugar">
             <button id="btnIngresar" type="button" onclick="inicio()" class="btn btn-primary">Ir al Juego</button>
         </div>
     </section>
 
     <!-- resultados -->
-    <section class="container py-5 text-center" id="sec-resul">
+    <section class="container py-5 text-center bg-dark" id="sec-resul">
         <div>
             <h2 class="text-center bg-drak text-white" id="p5"></h2>
+        </div>
+        <div>
+            <h2 class="text-center bg-drak text-white" id="p6"></h2>
+        </div>
+        <div>
+            <h2 class="text-center bg-drak text-white" id="p7"></h2>
         </div>
         <button id="btnIngresar" type="button" onclick="location.reload()" class="btn btn-primary">Volver a
             Jugar</button>
